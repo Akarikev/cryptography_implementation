@@ -9,39 +9,41 @@ _The Node.js crypto library is easy to use and can be integrated into Node.js ap
 _To start, you will need to have Node.js installed on your system. You can download the latest version of Node.js from the official website [Node Installation](<https://(https://nodejs.org/en/)>)
 Once you have Node.js installed, you can use the following steps to encrypt and decrypt a message using the Node.js crypto library:_
 
-1. first
-2. second
-3. third
-
-4. Create a new Node.js project by running the following command:
+1. Create a new Node.js project by running the following command:
    `npm init`
 
-5. Create a new JavaScript file, named index.js, and add the following code to import the Node.js crypto library:
+2. Create a new JavaScript file, named index.js, and add the following code to import the Node.js crypto library:
    `const crypto = require('crypto');`
 
-6. Add the following code to generate a random encryption key:
+3. Add the following code to generate a random encryption key:
    `const key = crypto.randomBytes(32);`
 
-7. Add the following code to define the message that you want to encrypt:
+4. Add the following code to define the message that you want to encrypt:
    `const message = 'This is the message that we want to encrypt.';`
 
-8. Add the following code to encrypt the message using the encryption key that you generated previously
+5. Add the following code to encrypt the message using the encryption key that you generated previously
    `const iv = crypto.randomBytes(16);`
+
    `const cipher = crypto.createCipheriv('aes-256-cbc', key, iv);`
+
    `let encrypted = cipher.update(message, 'utf8', 'hex');`
+
    `encrypted += cipher.final('hex');`
 
-9. Add the following code to decrypt the encrypted message using the encryption key that you generated in step 4:
+6. Add the following code to decrypt the encrypted message using the encryption key that you generated in step 4:
    `const decipher = crypto.createDecipheriv('aes-256-cbc', key, iv);`
+
    `let decrypted = decipher.update(encrypted, 'hex', 'utf8');`
+
    `decrypted += decipher.final('utf8');`
 
-10. Add the following code to print the encrypted and decrypted messages to the console:
-    `console.log('Encrypted message:', encrypted);`
-    `console.log('Decrypted message:', decrypted);`
+7. Add the following code to print the encrypted and decrypted messages to the console:
+   `console.log('Encrypted message:', encrypted);`
 
-11. Run the following command to execute the JavaScript file and encrypt and decrypt the message:
-    `node app.js`
+   `console.log('Decrypted message:', decrypted);`
+
+8. Run the following command to execute the JavaScript file and encrypt and decrypt the message:
+   `node index.js`
 
 If everything works correctly, you should see the encrypted and decrypted messages printed to the console.
 Like so: ![image](console.png)
