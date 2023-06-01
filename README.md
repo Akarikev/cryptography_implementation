@@ -173,3 +173,7 @@ _MetaMask is a free, open-source crypto wallet. It performs all key derivation i
 ##### Password managers
 
 _A password manager uses encryption to protect the sensitive data it stores, such as login credentials and other personal information. When a user saves a new login to the password manager, the software encrypts the data using a strong encryption algorithm. This ensures that even if someone were to gain access to the password manager's database, they would not be able to read the stored information without the proper decryption key - they would only be able to access encrypted ciphertext. The password manager also typically encrypts the user's master password, which is used to access the stored login credentials, for added security._
+
+##### Thanks to Skiff.com for the original implementation
+
+[skiff website](https://skiff.com/)
