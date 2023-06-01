@@ -1,0 +1,14 @@
+{
+  "name": "crypto-implement",
+  "version": "1.0.0",
+  "description": "cryptography implementation in node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "cryptography"
+  ],
+  "author": "prince elorm",
+  "license": "ISC"
+}
