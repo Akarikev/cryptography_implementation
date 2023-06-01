@@ -4,7 +4,7 @@ const crypto = require("crypto"); //import the crypto library
 
 const key = crypto.randomBytes(32); //*generate a random string from the given string for the key
 // console.log(key);
-const message = "john is a fool"; //!the message to display when  the message is received from the server
+const message = "i love cupcakes"; //!the message to display when  the message is received from the server
 
 const iv = crypto.randomBytes(16); //?generate a random string buffer to store the message contents
 
