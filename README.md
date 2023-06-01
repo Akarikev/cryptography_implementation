@@ -16,31 +16,47 @@ Once you have Node.js installed, you can use the following steps to encrypt and 
    `const crypto = require('crypto');`
 
 3. Add the following code to generate a random encryption key:
-   `const key = crypto.randomBytes(32);`
+
+   ```javascript
+   const key = crypto.randomBytes(32);
+   ```
 
 4. Add the following code to define the message that you want to encrypt:
-   `const message = 'This is the message that we want to encrypt.';`
+
+```javascript
+const message = "This is the message that we want to encrypt.";
+```
 
 5. Add the following code to encrypt the message using the encryption key that you generated previously
-   `const iv = crypto.randomBytes(16);`
 
-   `const cipher = crypto.createCipheriv('aes-256-cbc', key, iv);`
+```javascript
+const iv = crypto.randomBytes(16);
+`
 
-   `let encrypted = cipher.update(message, 'utf8', 'hex');`
+ const cipher = crypto.createCipheriv('aes-256-cbc', key, iv);
 
-   `encrypted += cipher.final('hex');`
+ let encrypted = cipher.update(message, 'utf8', 'hex');`;
+
+encrypted += cipher.final("hex");
+```
 
 6. Add the following code to decrypt the encrypted message using the encryption key that you generated in step 4:
-   `const decipher = crypto.createDecipheriv('aes-256-cbc', key, iv);`
 
-   `let decrypted = decipher.update(encrypted, 'hex', 'utf8');`
+```javascript
+const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
 
-   `decrypted += decipher.final('utf8');`
+let decrypted = decipher.update(encrypted, "hex", "utf8");
+
+decrypted += decipher.final("utf8");
+```
 
 7. Add the following code to print the encrypted and decrypted messages to the console:
-   `console.log('Encrypted message:', encrypted);`
 
-   `console.log('Decrypted message:', decrypted);`
+   ```javascript
+   console.log("Encrypted message:", encrypted);
+
+   console.log("Decrypted message:", decrypted);
+   ```
 
 8. Run the following command to execute the JavaScript file and encrypt and decrypt the message:
    `node index.js`
